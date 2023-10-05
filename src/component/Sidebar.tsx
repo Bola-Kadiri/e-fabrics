@@ -10,10 +10,7 @@ import {Link} from "react-router-dom"
 import logout from "../assets/logout.png"
 
 
-
-
-
-
+// Sidebar
 
 const Sidebar = () => {
    const [selected, setSelected] = useState(0);
