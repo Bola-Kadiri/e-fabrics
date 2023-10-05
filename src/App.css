@@ -1,0 +1,147 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  padding-top: 4rem;
+  transition: all 300ms ease;
+}
+/* logo */
+.bars{
+  display: none;
+}
+
+.logo {
+  display: flex;
+  height: 5rem;
+  font-weight: bold;
+  font-size: 22px;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+  height: 4%;
+}
+.logo > span > span {
+  color: var(--pink);
+}
+
+.logo > img {
+  width: 3rem;
+  height: 3rem;
+}
+
+
+.menuItem {
+  display: flex;
+  justify-content: space-between;
+  height: 2rem;
+  width: 100%;
+  align-items: center;
+  position: relative;
+  transition: all 300ms ease;
+  padding-left: 10px;
+}
+.menuItem a{
+  text-decoration: none;
+  color:#838383;
+  font-family: "Inter";
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.menuItem:hover {
+  cursor: pointer;
+}
+
+.menu .menuItem:last-child {
+  position: absolute;
+  bottom: 2.3rem;
+  width: 100%;
+}
+
+.active {
+  color: #679FD2;
+  margin-right: 0;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+ 
+}
+.active::after {
+  content: "";
+  width: 4px;
+  height: 100%;
+ margin-right: -3px;
+  background: #679FD2;
+ 
+ 
+}
+.test{
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-left: 20px;
+
+}
+img{
+  color: #838383;
+}
+.logout{
+  color: #FF4646;
+  margin-top: 80px;
+}
+
+.test span{
+  margin-left: 25px;
+}
+
+/* Tablets */
+@media screen and (max-width: 1200px) {
+  .menuItem>span{
+    display: none;
+  }
+  .logo{
+    display: none;
+  }
+}
+
+@media screen and (max-width: 968px) {
+  .sidebar{
+    position: fixed;
+    z-index: 9;
+    background: #ffe0e0;
+    width: 35%;
+    
+    height: 100%;
+  }
+  .menuItem>span{
+    display: block;
+  }
+  .logo{
+    display: flex;
+  }
+  .menu .menuItem:last-child {
+    position: relative;
+    margin-top: 6rem;
+  }
+  .bars{
+    display: flex;
+    position: fixed;
+    top: 2rem;
+    left:60%;
+    background:#ffe0e0;
+    padding:10px;
+    border-radius: 10px;
+    z-index: 9;
+  }
+  .close{
+    left: -60%;
+  }
+}
